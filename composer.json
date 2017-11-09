@@ -1,0 +1,81 @@
+{
+  "name": "xpressengine-plugin/oss_banner_skins",
+  "description": "This Package is Xpressengine Plugin - OSS 배너 스킨 모음.",
+  "keywords": [
+    "xpressengine",
+    "plugin"
+  ],
+  "license": "LGPL-2.1",
+  "version": "1.0.0",
+  "type": "xpressengine-plugin",
+  "support": {
+    "email": "input@your.email"
+  },
+  "authors": [
+    {
+      "name": "input your name",
+      "email": "input@your.email",
+      "homepage": "http://input.your.site",
+      "role": "Developer"
+    }
+  ],
+  "extra": {
+    "xpressengine": {
+      "title": "OSS 배너 스킨 모음",
+      "component": {
+        "widget/banner@widget/skin/oss_banner_skins@carousel": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\Carousel\\WidgetSkin",
+          "name": "OSS 회전 배너 스킨",
+          "description": "OSS 회전 배너 스킨"
+        },
+        "widget/banner@widget/skin/oss_banner_skins@expand": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\Expand\\WidgetSkin",
+          "name": "OSS 펼침 배너 스킨",
+          "description": "OSS 펼침 배너 스킨"
+        },
+        "widget/banner@widget/skin/oss_banner_skins@ssc_top": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\SSCTop\\WidgetSkin",
+          "name": "OSS 컨텐츠 배너 타입1 스킨",
+          "description": "OSS 컨텐츠 배너 타입1 스킨"
+        },
+        "widget/banner@widget/skin/oss_banner_skins@ssc_middle": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\SSCMiddle\\WidgetSkin",
+          "name": "OSS 컨텐츠 배너 타입2 스킨",
+          "description": "OSS 컨텐츠 배너 타입2 스킨"
+        },
+        "widget/banner@widget/skin/oss_banner_skins@ssc_right": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\SSCRight\\WidgetSkin",
+          "name": "OSS 컨텐츠 배너 타입3 스킨",
+          "description": "OSS 컨텐츠 타입3 스킨"
+        },
+        "widget/banner@widget/skin/oss_banner_skins@ssc_keyword": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\SSCKeyword\\WidgetSkin",
+          "name": "OSS 컨텐츠 배너 키워드 타입 스킨",
+          "description": "OSS 컨텐츠 키워드 타입 스킨"
+        },
+        "widget/banner@widget/skin/oss_banner_skins@ssc_full": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\SSCFull\\WidgetSkin",
+          "name": "OSS 컨텐츠 배너 full(200x169) 타입 스킨",
+          "description": "OSS 컨텐츠 full(200x169) 타입 스킨"
+        },
+        "widget/banner@widget/skin/oss_banner_skins@ssc_full2": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\SSCFull2\\WidgetSkin",
+          "name": "OSS 컨텐츠 배너 full(200x179) 타입 스킨",
+          "description": "OSS 컨텐츠 full(200x179) 타입 스킨"
+        },
+        "widget/banner@widget/skin/oss_banner_skins@ssc_snb": {
+          "class": "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\SSCSnb\\WidgetSkin",
+          "name": "OSS 컨텐츠 배너 SNB 타입 스킨",
+          "description": "OSS 컨텐츠 배너 SNB 타입 스킨"
+        }
+      }
+    }
+  },
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Xpressengine\\Plugins\\OSSBannerSkins\\Components\\": "components/"
+    }
+  }
+}
