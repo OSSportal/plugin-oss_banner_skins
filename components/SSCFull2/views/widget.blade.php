@@ -1,5 +1,5 @@
 <li class="mex">
     <a href="{{ url($item->link) }}" target="{{ $item->link_target }}">
-        <img src="{{ $item->imageUrl() }}" width="100%" height="179" alt="" role="presentation">
+				<img src="{{ $item->imageUrl() }}" width="249" height="auto" alt="{{ $item->title }}">
     </a>
 </li>
