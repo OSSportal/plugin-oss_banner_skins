@@ -15,8 +15,12 @@ class WidgetSkin extends BannerWidgetSkin
      */
     public function render()
     {
-        app('xe.frontend')->css(static::getPath().'/assets/bootstrap.carousel.css')->load();
-        app('xe.frontend')->js('assets/vendor/bootstrap/js/bootstrap.js')->appendTo('body')->load();
+//        app('xe.frontend')->css(static::getPath().'/assets/bootstrap.carousel.css')->load();
+//        app('xe.frontend')->js('assets/vendor/bootstrap/js/bootstrap.js')->appendTo('body')->load();
+
+        app('xe.frontend')->css(static::getPath().'/assets/rise.css')->load();
+        app('xe.frontend')->js(static::getPath().'/assets/rise.js')->appendTo('body')->load();
+        $this->setView('rise');
 
         return parent::render();
     }
