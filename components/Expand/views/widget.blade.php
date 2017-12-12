@@ -4,7 +4,7 @@ use Xpressengine\Plugins\OSSBannerSkins\Components\Expand\WidgetSkin;
 <div class="area_mrelated" id="banner_{{$group->id}}">
     <ul>
         @foreach($items as $idx => $item)
-        <li><a href="{{ url($item->link) }}" target="{{ $item->link_target }}" title="{{ $item->content }}"><img src="{{ $item->imageUrl() }}" width="178" height="40" alt="과학기술정보통신부"></a></li>
+        <li><a href="{{ url($item->link) }}" target="{{ $item->link_target }}" title="{{ $item->content }}"><img src="{{ $item->imageUrl() }}" width="178" height="40" alt="{{ $item->title}}"></a></li>
         @endforeach
     </ul>
 
