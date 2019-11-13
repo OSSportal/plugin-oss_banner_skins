@@ -2,8 +2,8 @@
 return [
     'banner' => [
         'image' => [
-            'width' => '478',
-            'height' => '358'
+            'width' => '2600',
+            'height' => '300'
         ]
     ],
     'support' => [
