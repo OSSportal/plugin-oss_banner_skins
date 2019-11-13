@@ -62,7 +62,6 @@
             $active.removeClass('active');
             that.appearing = false;
         } else {
-            console.log(4);
             $active.removeClass('active');
             $next.addClass('active');
             this.appearing = false;

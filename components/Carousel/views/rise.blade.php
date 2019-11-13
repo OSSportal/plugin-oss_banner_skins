@@ -1,10 +1,17 @@
 <article class="area_bnr_top rise" id="banner_{{$group->id}}" data-ride="rise">
     <div class="area_bnr_page">
-        <ol class="rise-indicators">
-            @foreach($items as $idx => $item)
-                <li data-target="#banner_{{$group->id}}" data-appear-to="{{$idx}}" class="{{$idx==0 ? 'active':''}}"><a href="#">{{$idx+1}}페이지</a></li>
-            @endforeach
-        </ol>
+        <div class="area_bnr_page_inner">
+            <ol class="rise-indicators">
+                @foreach($items as $idx => $item)
+                    <li data-target="#banner_{{$group->id}}" data-appear-to="{{$idx}}" class="{{$idx==0 ? 'active':''}}"><a href="#">{{$idx+1}}페이지</a></li>
+                @endforeach
+            </ol>
+            <button type="button" class="banner_play_toggle __slide_toggle">
+                <!-- xi-play-circle-o -->
+                <i class="xi-pause-circle-o"></i>
+                <span class="banner_play_toggle__text blind">슬라이드 멈춤</span>
+            </button>
+        </div>
     </div>
     <ul class="rise-inner" role="listbox">
         @foreach($items as $idx => $item)
