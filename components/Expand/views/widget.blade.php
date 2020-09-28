@@ -1,24 +1,58 @@
 <?php
 use Xpressengine\Plugins\OSSBannerSkins\Components\Expand\WidgetSkin;
 ?>
-<div class="area_mrelated" id="banner_{{$group->id}}">
-    <ul>
-        @foreach($items as $idx => $item)
-        <li><a href="{{ url($item->link) }}" target="{{ $item->link_target }}" title="{{ $item->content }}"><img src="{{ $item->imageUrl() }}" width="178" height="40" alt="{{ $item->title}}"></a></li>
-        @endforeach
-    </ul>
-
-    <div>
-        <button><img src="{{ asset(WidgetSkin::getPath().'/assets/images/btn_mup.gif') }}" width="15" height="16" alt="관련사이트 다른페이지 보기"></button>
-        <button><img src="{{ asset(WidgetSkin::getPath().'/assets/images/btn_mdown.gif') }}" width="15" height="16" alt="관련사이트 다른페이지 보기"></button>
+<div class="section-main-carousel"  id="banner_{{$group->id}}">
+    <div class="section-main-carousel-list">
+    @foreach ($items as $item)
+        <div class="xf-carousel-item">
+            <a href="{{ url($item->link) }}" target="_blank" class="base-a"><img src="{{ $item->imageUrl() }}" alt="{{ $item->title }}"></a>
+        </div>
+    @endforeach
     </div>
 </div>
-{{ XeFrontend::html('oss::related.toggle')->content("
+
+
 <script>
-    $(function () {
-        $('#banner_".$group->id." button').click(function () {
-            $('#banner_".$group->id." > ul').toggleClass('on');
+    $(document).ready(function(){
+        $('.section-main-carousel-list').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            // autoplay: true,
+            autoplaySpeed: 3000,
+            infinite: false,
+            arrows: true,
+            
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 5
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 5
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 576,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
         });
     });
 </script>
-")->load() }}
+
